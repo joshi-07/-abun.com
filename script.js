@@ -106,5 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('mousedown', () => gsap.to(btn, { scale: 0.98, duration: 0.06 }));
       btn.addEventListener('mouseup', () => gsap.to(btn, { scale: 1.02, duration: 0.06 }));
     });
+
+    // Minor hover animations for sample cards (popup effect)
+    const sampleCards = document.querySelectorAll('.card.sample');
+    sampleCards.forEach(card => {
+      card.addEventListener('mouseenter', () => gsap.to(card, { scale: 1.02, y: -5, duration: 0.2, ease: 'power2.out' }));
+      card.addEventListener('mouseleave', () => gsap.to(card, { scale: 1, y: 0, duration: 0.2, ease: 'power2.out' }));
+    });
   }
 });
