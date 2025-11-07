@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ABUN — AI Content Writer (Demo)</title>
+  <meta name="description" content="ABUN — AI content writer. Demo landing page built as a UI/UX assignment.">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP (for polished micro-interactions) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" defer></script>
+  <!-- ScrollReveal (simple reveal effects) -->
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+</head>
+<body class="theme-dark">
+  <!-- animated gradient background -->
+  <div class="bg-gradient">
+    <svg class="blob b1" viewBox="0 0 500 500" preserveAspectRatio="none">
+      <path fill="#5b21b6" d="M458,314Q424,378,359,408Q294,438,234,418Q174,398,120,358Q66,318,56,250Q46,182,90,125Q134,68,204,59Q274,50,336,80Q398,110,436,168Q474,226,458,314Z" />
+    </svg>
+    <svg class="blob b2" viewBox="0 0 500 500" preserveAspectRatio="none">
+      <path fill="#7c3aed" d="M421,305Q392,360,340,396Q288,432,229,425Q170,418,113,384Q56,350,48,283Q40,216,83,160Q126,104,193,86Q260,68,314,95Q368,122,416,170Q464,218,421,305Z" />
+    </svg>
+  </div>
+
+  <!-- header -->
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <a class="brand" href="#"><span class="logo-abun">ABUN</span><small class="logo-dot">.AI</small></a>
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#features">Features</a>
+        <a href="#samples">Samples</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌓</button>
+        <button class="btn btn-primary open-modal" data-plan="Free Trial">Start Free</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <main>
+    <section class="hero section-hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">Write valuable content faster — with AI that understands people.</h1>
+        <p class="hero-sub">ABUN converts ideas into SEO-friendly articles, landing copy, and ready-to-publish drafts. Built for creators, marketers, and small teams.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary btn-lg open-modal" data-plan="Free Trial">Start Free Trial</button>
+          <a class="btn btn-ghost btn-lg" href="#samples">View Samples</a>
+        </div>
+
+        <ul class="benefits">
+          <li><strong>Fast drafts</strong> — From brief to publishable in minutes.</li>
+          <li><strong>Keyword intelligence</strong> — Built-in suggestions & intent.</li>
+          <li><strong>Affordable</strong> — Starter plan for students & creators.</li>
+        </ul>
+      </div>
+
+      <div class="hero-right glass">
+        <img alt="Writer at desk" src="https://source.unsplash.com/collection/190727/800x600" />
+        <figcaption class="img-caption">Demo image (Unsplash) — for concept only</figcaption>
+      </div>
+    </section>
+
+    <!-- features -->
+    <section id="features" class="section container">
+      <h2 class="section-title">What ABUN does</h2>
+      <p class="section-sub">A modern AI writing assistant focused on clarity, SEO, and scale.</p>
+
+      <div class="grid grid-3">
+        <article class="card feature glass">
+          <img class="card-img" src="https://source.unsplash.com/featured/?keyboard,desk" alt="">
+          <h3>High-quality drafts</h3>
+          <p>Start with a short brief and receive a structured, ready-to-edit article tailored to your tone.</p>
+        </article>
+
+        <article class="card feature glass">
+          <img class="card-img" src="https://source.unsplash.com/featured/?analytics,search" alt="">
+          <h3>Keyword Research</h3>
+          <p>Identify high-potential keywords with intent labels and placement cues baked into the content.</p>
+        </article>
+
+        <article class="card feature glass">
+          <img class="card-img" src="https://source.unsplash.com/featured/?team,collaboration" alt="">
+          <h3>Templates & Samples</h3>
+          <p>Use templates for blogs, product pages, emails, and social posts — save time and maintain quality.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- samples -->
+    <section id="samples" class="section container">
+      <h2 class="section-title">Ready-to-use samples</h2>
+      <div class="grid grid-2">
+        <div class="card sample glass">
+          <h4>Blog Intro — UX Design</h4>
+          <p>Product design is the intersection of needs and delight. This sample expands a short brief into a fully-formed introduction that hooks readers.</p>
+          <a class="link" href="#">Use this sample</a>
+        </div>
+
+        <div class="card sample glass">
+          <h4>Product Description — Wireless Headphones</h4>
+          <p>Immersive sound, long-lasting battery, and comfort-first design — short product descriptions that convert.</p>
+          <a class="link" href="#">Use this sample</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- pricing -->
+    <section id="pricing" class="section container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="section-sub">Simple plans. Start free — upgrade when you scale.</p>
+
+      <div class="grid grid-3">
+        <div class="plan card glass">
+          <h3>Free</h3>
+          <div class="price">$0</div>
+          <ul>
+            <li>Basic keywords</li>
+            <li>5 articles / month</li>
+            <li>Email support</li>
+          </ul>
+          <button class="btn btn-primary open-modal" data-plan="Free Plan">Start Free</button>
+        </div>
+
+        <div class="plan card glass plan-featured">
+          <h3>Pro</h3>
+          <div class="price">$19 <span>/mo</span></div>
+          <ul>
+            <li>Full keyword research</li>
+            <li>Unlimited drafts</li>
+            <li>Priority support</li>
+          </ul>
+          <button class="btn btn-primary open-modal" data-plan="Pro Plan">Start Pro</button>
+        </div>
+
+        <div class="plan card glass">
+          <h3>Team</h3>
+          <div class="price">Contact</div>
+          <ul>
+            <li>Team seats</li>
+            <li>Custom workflows</li>
+            <li>Dedicated support</li>
+          </ul>
+          <button class="btn btn-ghost open-modal" data-plan="Team Plan">Contact Sales</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact / cta -->
+    <section id="contact" class="section container contact-cta glass">
+      <div>
+        <h2 class="section-title">Ready to create?</h2>
+        <p class="section-sub">Start your free trial — get SEO-friendly content today.</p>
+      </div>
+      <div>
+        <button class="btn btn-primary btn-lg open-modal" data-plan="Create Account">Create an account</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <small>© 2025 ABUN — Demo (Internshala assignment). All content is fictional and for demonstration only.</small>
+      </div>
+      <div class="footer-right">
+        <a class="social" href="#" aria-label="LinkedIn">in</a>
+        <a class="social" href="#" aria-label="Twitter">tw</a>
+        <a class="social" href="#" aria-label="Dribbble">db</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-panel glass">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h3>Demo Signup</h3>
+      <p>This project is a UI/UX concept created for an assignment. The company, pricing and content are for demonstration only.</p>
+
+      <form id="demoForm" class="demo-form">
+        <label>
+          Email
+          <input id="demoEmail" type="email" placeholder="you@company.com" required>
+        </label>
+        <label>
+          Full name
+          <input id="demoName" type="text" placeholder="Your name">
+        </label>
+        <input type="hidden" id="demoPlan" value="">
+        <div class="modal-actions">
+          <button class="btn btn-primary" type="submit">Request demo</button>
+          <button type="button" class="btn btn-ghost modal-close">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
